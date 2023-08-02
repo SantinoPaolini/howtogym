@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import ReactPlayer from 'react-player';
-import './App.css';
 
 const App = () => {
   const playerRef = useRef(null);
@@ -29,4 +28,3 @@ const App = () => {
 }
 
 export default App;
-
