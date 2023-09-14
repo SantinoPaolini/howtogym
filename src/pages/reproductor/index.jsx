@@ -22,7 +22,7 @@ const App = () => {
         controls
       />
     </div>
-    <button onClick={MuteBtn}>Mutar</button> //pregunta si el boton esta presionado y los spawnea
+    <button onClick={MuteBtn}>Mutar</button> 
     </>
   );
 }
