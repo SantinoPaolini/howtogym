@@ -16,10 +16,10 @@ const Exercise = () => {
           enableDamping
           dampingFactor={0.05}
           screenSpacePanning={false}
-          minDistance={1}
-          maxDistance={100}
+          minDistance={40}
+          maxDistance={500}
           maxPolarAngle={Math.PI / 2}
-          target={[0, 0, 0]}
+          target={[-10, -10, -200]}
         />
         <ambientLight />
       </Canvas>
