@@ -6,10 +6,21 @@ import { Canvas } from "@react-three/fiber";
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next";
 import { Model } from "public/Fbx";
 import React from "react";
+import { IconArrowLeft } from "@tabler/icons-react";
+import { useRouter } from 'next/router'
+
 
 const Exercise = () => {
+  const router = useRouter();
   return (
     <div className="flex justify-center min-h-screen items-center">
+      <IconArrowLeft
+        className="absolute top-4 left-4 hover:cursor-pointer z-10"
+        size={62}
+        strokeWidth={2}
+        color={"black"}
+        onClick={() => router.back()}
+      />
       <Canvas style={{ width: "100vw", height: "100vh" }}>
         <Model position={[-10, -10, -200]} />
         <OrbitControls

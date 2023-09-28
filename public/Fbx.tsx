@@ -36,13 +36,13 @@ export function Model(props: JSX.IntrinsicElements["group"]) {
   const { actions } = useAnimations<GLTFActions>(animations, group);
   useEffect(() => {
     actions["mixamo.com"].play();
-    return () => animations.forEach((clip) => actions[clip.name].stop());
+    return () => animations.forEach((clip) => actions[clip.name]?.stop());
   }, [animations, actions]);
   useEffect(() => {
     const mixer = new THREE.AnimationMixer(nodes.mixamorig1Hips2);
     const action = mixer.clipAction(animations[0]);
     action.play();
-    return () => animations.forEach((clip) => actions[clip.name].stop());
+    return () => animations.forEach((clip) => actions[clip.name]?.stop());
   }, [animations, actions, nodes.mixamorig1Hips2]);
 
   return (
